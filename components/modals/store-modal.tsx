@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 
-import useStoreModal from "@/hooks/use-store-modal";
+import { useStoreModal } from "@/hooks/use-store-modal";
 import { Modal } from "@/components/ui/modals";
 import {
   Form,
