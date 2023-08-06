@@ -8,7 +8,7 @@ import { useState } from "react";
 import { toast } from "react-hot-toast";
 
 import { useStoreModal } from "@/hooks/use-store-modal";
-import { Modal } from "@/components/ui/modals";
+import { Modal } from "@/components/ui/modal";
 import {
   Form,
   FormControl,
