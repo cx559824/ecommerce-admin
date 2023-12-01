@@ -9,6 +9,7 @@ import {
 import { Store } from "@prisma/client";
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
+import { ComponentPropsWithoutRef } from "react";
 
 import { Button } from "./ui/button";
 import {
@@ -28,9 +29,7 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 
-type PopoverTriggerProps = React.ComponentPropsWithoutRef<
-  typeof PopoverTrigger
->;
+type PopoverTriggerProps = ComponentPropsWithoutRef<typeof PopoverTrigger>;
 
 interface StoreSwitcherProps extends PopoverTriggerProps {
   items: Store[];
@@ -50,7 +49,7 @@ export default function StoreSwitcher({
   }));
 
   const currentStore = formattedItems.find(
-    (item) => item.value === params.storeId
+    (item) => item.value === params.storeId,
   );
 
   const [open, setOpen] = useState(false);
@@ -95,7 +94,7 @@ export default function StoreSwitcher({
                       "ml-auto h-4 w-4",
                       currentStore?.value === store.value
                         ? "opacity-100"
-                        : "opacity-0"
+                        : "opacity-0",
                     )}
                   />
                 </CommandItem>
